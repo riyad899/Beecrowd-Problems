@@ -1,36 +1,37 @@
-#include<stdio.h>
-int main( )
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
 {
-    int operation;
-    int a,b;
-    int result;
-    printf("For addition, press 1.\n For Subtraction, press 2.\n For Multiplication, press 3.\n For division, press 4.\n");
-    scanf("%d",&operation);
-    printf("Input the 2 values.\n");
-    scanf("%d",&a);
-    scanf("%d",&b);
-    if (operation==1)
-    {
-        result=a+b;
-        printf("\nThe result is %d",result);
-    }
-    else if (operation==2)
-    {
-        result=a-b;
-        printf("\nThe result is %d",result);
-    }
-    else if (operation==3)
+    while (true) {
+        int n;
+        cin >> n;
+        if (n == 0) {
+            break;
+        }
 
-    {
-        result=a*b;
-    printf("\nThe result is %d",result);
-    }
-    else if (operation==4)
-    {
-        result=a/b;
-        printf("\nThe result is %d",result);
-    }
-    else
-        printf("Invalid Operation");
+        int arr[n];
+        for (int i = 0; i < n; ++i) {
+            cin >> arr[i];
+        }
 
+        int max_index = 0;
+        for (int i = 1; i < n; ++i) {
+            if (arr[i] > arr[max_index]) {
+                max_index = i;
+            }
+        }
+          arr[max_index] = 0;
+
+        int second_max_index = 0;
+        for (int i=0; i < n; ++i) {
+            if (arr[i] > arr[second_max_index]) {
+                second_max_index = i;
+            }
+        }
+
+        cout << second_max_index+1 << endl;
+    }
+
+    return 0;
 }
