@@ -1,18 +1,37 @@
-#include<iostream>
-#include <iomanip>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main () {
-    int day;
-    int month;
-    int year;
+int main() {
+    int n;
+    cin >> n;
+    int arr[n];
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
 
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = i + 1; j < n; j++) {
+            if (arr[j] < arr[i]) {
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
 
-    cin >> day  >> month >> year;
+    int oneArray = arr[0];
+    int count = 1;
 
-    cout << setfill('0') << setw(2) << month << "/" << setw(2) << day << "/" <<setfill('0') << setw(2)<< year << endl;
-    cout <<setfill('0') << setw(2)<< year << "/" << setfill('0') << setw(2) << month << "/" << setw(2) << day << endl;
-    cout   << setw(2) << setfill('0') << day << "-" << setw(2) << month << "-" <<setfill('0') << setw(2)<< year << endl;
+    for (int i = 1; i < n; i++) {
+        if (arr[i] == oneArray) {
+            count++;
+        } else {
+            cout << oneArray << " aparece " << count << " vez(es)\n";
+            oneArray = arr[i];
+            count = 1;
+        }
+    }
+    cout << oneArray << " aparece " << count << " vez(es)\n";
 
     return 0;
 }
