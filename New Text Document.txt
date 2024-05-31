@@ -1,37 +1,24 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <iomanip>
+#include <string>
+
 using namespace std;
 
 int main() {
-    int n;
-    cin >> n;
-    int arr[n];
-    for (int i = 0; i < n; i++) {
-        cin >> arr[i];
-    }
+    string sellerName;
+    double fixedSalary, salesTotal, commissionRate = 0.15, totalSalary;
 
-    for (int i = 0; i < n - 1; i++) {
-        for (int j = i + 1; j < n; j++) {
-            if (arr[j] < arr[i]) {
-                int temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
-            }
-        }
-    }
 
-    int oneArray = arr[0];
-    int count = 1;
+    getline(cin, sellerName); // Read the full seller name with spaces
 
-    for (int i = 1; i < n; i++) {
-        if (arr[i] == oneArray) {
-            count++;
-        } else {
-            cout << oneArray << " aparece " << count << " vez(es)\n";
-            oneArray = arr[i];
-            count = 1;
-        }
-    }
-    cout << oneArray << " aparece " << count << " vez(es)\n";
+    cin >> fixedSalary;
+
+    cin >> salesTotal;
+
+    totalSalary = fixedSalary + salesTotal * commissionRate;
+
+    cout << fixed << setprecision(2);
+    cout << "TOTAL = R$ " << totalSalary << endl;
 
     return 0;
 }
