@@ -1,0 +1,19 @@
+#include<iostream>
+#include<sstream>
+
+using namespace std;
+
+string decimaltoHex(int decimal){
+    stringstream ss;
+
+    ss << hex << uppercase << decimal;
+    return ss.str();
+}
+int main(){
+    int decimalnumber;
+    cin>>decimalnumber;
+
+    string hexadecimalnumber = decimaltoHex(decimalnumber);
+
+    cout<<hexadecimalnumber<<endl;
+}
