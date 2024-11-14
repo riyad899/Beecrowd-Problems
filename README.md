@@ -56,30 +56,20 @@ Graph	XX	YY
 Geometry	XX	YY
 Data Structures	XX	YY
 Feel free to update the counts above as you solve more problems!
-
+<br/>
 📌 Contribution
 Contributions are welcome! Here's how you can contribute:
 
-Fork the repository.
-Create a new branch:
-bash
-Copy code
-git checkout -b feature/your-feature-name
-Commit your changes:
-bash
-Copy code
-git commit -am 'Add your message here'
-Push to the branch:
-bash
+<br/>
 Copy code
 git push origin feature/your-feature-name
 Create a Pull Request.
 🛡️ Code of Conduct
 To maintain a positive environment, contributors are expected to follow the Contributor Covenant Code of Conduct.
-
+<br/>
 📄 License
 This project is licensed under the MIT License. You are free to use, modify, and distribute this software under the terms of the MIT License. See the LICENSE file for more details.
-
+<br/>
 🗂️ Related Resources
 Beecrowd Official Website
 C++ Programming Guide
@@ -87,23 +77,12 @@ GitHub Markdown Guide
 Online Compiler for Quick Tests
 📧 Contact
 For any questions or suggestions, feel free to reach out:
-
+<br/>
 GitHub: riyad-x
 LinkedIn: riyad-x
 Email: your-email@example.com
 🤝 Acknowledgements
 Special thanks to:
-
-The Beecrowd community for providing a platform for practicing and enhancing coding skills.
-Everyone who has contributed to this repository.
-Open-source contributors for making knowledge freely accessible to all.
-Feel free to replace placeholder content, such as problem counts and your email, to personalize the file!
-
-rust
-Copy code
-
-You can now use this content for a comprehensive `README.md` file for your repository.
-
 
 
 
